@@ -1,0 +1,69 @@
+* Importing a Pre-Configured Virtual Machine
+
+The following instructions guide you through the process of importing
+a virtual machine that already has Ubuntu MATE installed along with
+all the tools necessary to start working on your labs.
+
+The first step is to download [[file:FlatironUbuntu.ova][this file]] (It's big and might take a
+while).
+
+** Install VirtualBox (if you haven't already)
+
+Download the latest version from the [[https://www.virtualbox.org/wiki/Downloads][VirtualBox Downloads]] pages:
+- Windows users can use the version for a [[https://download.virtualbox.org/virtualbox/6.0.10/VirtualBox-6.0.10-132072-Win.exe][Windows host]].
+- Mac users can use the version for a [[https://download.virtualbox.org/virtualbox/6.0.10/VirtualBox-6.0.10-132072-OSX.dmg][OS X host]].
+
+** Import the Virtual Machine into Virtual Box
+
+Once you've got the [[file:FlatironUbuntu.ova][VM]] downloaded and [[https://www.virtualbox.org/wiki/Downloads][VirtualBox]] installed, you can
+move on to imported the new machine. Launch VirtualBox and select
+=File > Import Appliance...= from the toolbar menu.
+
+#+CAPTION: Import Appliance Screen
+[[./01%20-%20Import%20Appliance.png]]
+
+Click the icon to the right of the textbox to navigate to the file you
+downloaded.
+
+#+CAPTION: Navigate to the VM File
+[[./02%20-%20Navigate%20to%20Downloaded%20File.png]]
+
+Once you've selected the right file, click continue.
+
+#+CAPTION: Click Continue
+[[./03%20-%20Select%20Continue.png]]
+
+Then Click Import to take the default settings.
+
+#+CAPTION: Click Import
+[[./04%20-%20Select%20Import.png]]
+
+The import might take a while; wait for it to finish.
+
+#+CAPTION: Wait for import to finish
+[[./05%20-%20Wait%20for%20Import.png]]
+
+You should now see a new VM called "Flation Ubuntu". Make sure that
+VM is select and click the start arrow.
+
+#+CAPTION: Start the VM
+[[./06%20-%20Select%20the%20new%20VM.png]]
+
+The VM should launch. When you get to the login screen, you should see
+a user named "Freddie Flatiron". Click 'Log In'.
+
+#+CAPTION: Login
+[[./07%20-%20Login.png]]
+
+You should now be logged into the VM. The main user account is 'learn'
+and the password is also 'learn'. The timezone is set to EST.
+
+To get to a terminal: click on "Menu" in the upper left courner and
+select =System Tools > MATE Terminal=.
+
+** Finalize your set up
+
+Almost everything is pre-setup for you, but you'll need to link =learn=
+to your github account and configure a few things. Follow these
+instructions:
+- [[https://help.learn.co/en/articles/1117571-virtualbox-manual-environment-setup]]
