@@ -4,4 +4,8 @@
 [ "$UID" -eq 0 ] || exec sudo "$0" "$@"
 
 # Make sure that the system is up to date
-apt-get -yq update && apt-get -yq upgrade
+apt-get -yq update &&
+    apt-get -yq upgrade &&
+
+    # Install RVM and Ruby
+    apt-get -yq install software-properties-common
