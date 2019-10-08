@@ -1,0 +1,75 @@
+* Download the XUbuntu install .iso file
+
+Download XUbuntu for [[http://mirror.us.leaseweb.net/ubuntu-cdimage/xubuntu/releases/18.04/release/xubuntu-18.04-desktop-amd64.iso][64-bit]] (probably what you want) or [[http://mirror.us.leaseweb.net/ubuntu-cdimage/xubuntu/releases/18.04/release/xubuntu-18.04-desktop-i386.iso][32-bit]]
+machines.
+
+* Create a new Virtual Machine
+
+1. Open =VirtualBox= and click the /New/ button:
+
+[[file:01-ClickNew.png]]
+
+2. Give your VM a name and make sure that the /type/ is set to /Linux/ and
+   /version/ is /Ubuntu (64-bit)/ or /Ubuntu (32-bit)/:
+
+[[file:02-NameAndOperatingSystem.png]]
+
+3. Select the amount of memory to give your VM. XUbuntu requires *at
+   least* 512 MB of memory, but the more it has, the better it can run.
+   At the same time though you don't want to give it too much or your
+   host system won't have enough. Generally, you don't want to give it
+   more than 1/4 of your total memory:
+
+[[file:03-MemorySize.png]]
+
+4. Make sure that /Create a virtual hard disk now/ is selected and click
+   /Create/:
+
+[[file:04-HardDisk.png]]
+
+5. Make sure that /VDI (VirtualBox Disk Image)/ is selected and click
+   /Next/:
+
+[[file:05-HardDiskFileType.png]]
+
+6. Make sure that /Dynamically allocated/ is selected and click /Next/:
+
+[[file:06-StorageOnPhysicalHardDisk.png]]
+
+7. Choose a size to make your virtual hard disk. This must be at least
+   *20 GB*:
+
+[[file:07-FileLocationAndSize.png]]
+
+You should now see your new VM listed on the left:
+
+[[file:08-Settings.png]]
+
+* Boot the VM
+
+1. Click on /Settings/ and navigate to the /Storage/ section:
+
+[[file:09-Settings.png]]
+
+2. Under /Controller: IDE/ select the CD icon that says /Empty/ next to
+   it. On the right, next to /Optical Drive: IDE Secondary Master/ click
+   the CD icon and select /Choose Virtual Optical Disk File/:
+
+[[file:10-ClickCDIcon.png]]
+
+3. Navigate to where your [[*Download the XUbuntu install .iso file][.iso file]] was downloaded, select it, and
+   click /Open/
+
+[[file:11-SelectISOFile.png]]
+
+Next to that CD icon, you should now the name of the [[*Download the XUbuntu install .iso file][.iso file]] you
+downloaded, instead of /Empty/. Go ahead and click /OK/.
+
+[[file:12-ISOInserted.png]]
+
+* Install XUbuntu
+
+1. Look at the column on the left and make sure your new VM is
+   selected. Click /Start/:
+
+[[file:13-ClickStart.png]]
