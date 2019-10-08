@@ -9,4 +9,5 @@ apt-get -yq update &&
 
     # Install RVM and Ruby
     apt-get -yq install software-properties-common &&
-    apt-add-repository -y ppa:rael-gc/rvm
+    apt-add-repository -y ppa:rael-gc/rvm &&
+    apt-get -yq install rvm
