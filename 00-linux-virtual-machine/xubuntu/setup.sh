@@ -10,4 +10,8 @@ apt-get -yq update &&
     # Install RVM and Ruby
     apt-get -yq install software-properties-common &&
     apt-add-repository -y ppa:rael-gc/rvm &&
-    apt-get -yq install rvm
+    apt-get -yq install rvm &&
+
+    # Ensure login shell
+    source /etc/profile && source ~/.profile &&
+    grep -qxF "CommandLoginShell=TRUE" ~/.config/xfce4/terminal/terminalrc || echo "CommandLoginShell=TRUE" >> ~./config/xfce4/terminal/terminalrc
