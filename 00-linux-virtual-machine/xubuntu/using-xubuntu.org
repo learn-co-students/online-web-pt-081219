@@ -109,3 +109,22 @@ downloaded, instead of /Empty/. Go ahead and click /OK/.
 XUbuntu should now be installing. It might take a little bit:
 
 [[file:21-XUbuntuIsInstalling.png]]
+
+* Finalizing your installation
+
+1. When the installation finishes, click /Restart Now/:
+
+[[file:22-InstallationComplete.png]]
+
+2. When it asks you to remove the installation medium, just press
+   /ENTER/:
+
+[[file:23-RemoveCD.png]]
+
+The VM will now reboot:
+
+[[file:24-XUbuntuBooted.png]]
+
+3. Open the Terminal Emulator:
+
+[[file:25-OpenTerminalEmulator.png]]
