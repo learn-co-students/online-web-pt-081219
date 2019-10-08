@@ -13,19 +13,11 @@ apt-get -yq update &&
     apt-get -yq install rvm
 
 # Ensure login shell
-if [ -f /etc/profile ]; then
-    . /etc/profile
-fi
-
-if [ -f ~/.bash_profile ]; then
-    . ~/.bash_profile
-fi
-
-if [ -f ~/.profile ]; then
-    . ~/.profile
-fi
-
 grep -qxF "CommandLoginShell=TRUE" ~/.config/xfce4/terminal/terminalrc || echo "CommandLoginShell=TRUE" >> ~/.config/xfce4/terminal/terminalrc
 
+echo "You probs gotta restart the terminal"
+
 # install ruby
-rvm install ruby
+hash ruby 2>/dev/null || rvm install ruby
+
+echo "You probs gotta restart the terminal"
