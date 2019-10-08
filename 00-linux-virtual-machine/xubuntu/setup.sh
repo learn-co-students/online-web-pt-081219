@@ -26,3 +26,6 @@ if [ -f ~/.profile ]; then
 fi
 
 grep -qxF "CommandLoginShell=TRUE" ~/.config/xfce4/terminal/terminalrc || echo "CommandLoginShell=TRUE" >> ~/.config/xfce4/terminal/terminalrc
+
+# install ruby
+rvm install ruby
