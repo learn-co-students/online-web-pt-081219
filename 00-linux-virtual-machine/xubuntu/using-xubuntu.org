@@ -73,3 +73,39 @@ downloaded, instead of /Empty/. Go ahead and click /OK/.
    selected. Click /Start/:
 
 [[file:13-ClickStart.png]]
+
+2. When the VM boots up, click /Install Xubuntu/:
+
+[[file:14-Install.png]]
+
+3. Make sure that the language for the keyboard you use is selected
+   and click /Continue/:
+
+[[file:15-KeyBoardLayout.png]]
+
+4. Make sure that both check boxes on the /Updates and other software/
+   page are selected and click /Continue/:
+
+[[file:16-UpdatesAndOtherSoftware.png]]
+
+5. Make sure that /Erase disk and install Xubuntu/ is selected and click
+   /Install Now/:
+
+[[file:17-InstallationType.png]]
+
+6. Click /Continue/ to confirm that you really want to write the changes
+   to disks:
+
+[[file:18-ConfirmInstallationType.png]]
+
+7. Select your timezone and click /Continue/:
+
+[[file:19-Timezone.png]]
+
+8. Enter information to create a new user account and click /Continue/:
+
+[[file:20-CreateUser.png]]
+
+XUbuntu should now be installing. It might take a little bit:
+
+[[file:21-XUbuntuIsInstalling.png]]
