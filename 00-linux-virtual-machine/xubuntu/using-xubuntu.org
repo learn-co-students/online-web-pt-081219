@@ -43,7 +43,7 @@ machines.
 
 You should now see your new VM listed on the left:
 
-[[file:08-Settings.png]]
+[[file:09-Settings.png]]
 
 * Boot the VM
 
