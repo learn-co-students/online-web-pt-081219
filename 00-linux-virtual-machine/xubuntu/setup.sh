@@ -21,3 +21,4 @@ echo "You probs gotta restart the terminal"
 hash ruby 2>/dev/null || rvm install ruby
 
 echo "You probs gotta restart the terminal"
+echo "BLBHALKBLHDFLHSDFLHLKFDJ"
