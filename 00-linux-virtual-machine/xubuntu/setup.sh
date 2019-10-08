@@ -14,4 +14,4 @@ apt-get -yq update &&
 
     # Ensure login shell
     source /etc/profile && source ~/.profile &&
-    grep -qxF "CommandLoginShell=TRUE" ~/.config/xfce4/terminal/terminalrc || echo "CommandLoginShell=TRUE" >> ~./config/xfce4/terminal/terminalrc
+    grep -qxF "CommandLoginShell=TRUE" ~/.config/xfce4/terminal/terminalrc || echo "CommandLoginShell=TRUE" >> ~/.config/xfce4/terminal/terminalrc
