@@ -145,7 +145,7 @@ The VM will now reboot:
 
 The terminal may ask you for a password. If it does, type the password
 you for the user account you created earlier. You won't see anything
-appear on the scree--but it is working. Just type the password and hit
+appear on the screen--but it is working. Just type the password and hit
 /Enter/.
 
 It will pause to ask you to confirm that you want to install
