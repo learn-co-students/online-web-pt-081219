@@ -15,6 +15,10 @@ apt-get -yq update &&
     apt-add-repository -y ppa:rael-gc/rvm &&
     apt-get -yq install rvm &&
 
+    # When RVM installs ruby, it's going to run a script that involves running sudo. This script 
+    # will only work if run from an interactive shell and not from within this bash script--this
+    # work around makes sudo not ask for a password, so that we can run the RVM from within this
+    # script.
     { grep -qxF "${username} ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo "${username} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers; } &&
 
     # Download the flatiron bash_profile
