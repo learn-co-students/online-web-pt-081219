@@ -13,12 +13,12 @@ apt-get -yq update &&
     # RVM has a build for ubuntu. Add the PPA and install it.
     apt-get -yq install software-properties-common &&
     apt-add-repository -y ppa:rael-gc/rvm &&
-    apt-get -yq install rvm &&
+    apt-get -yq install rvm
 
-    { grep -qxF "${username} ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo "${username} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers } &&
+    { grep -qxF "${username} ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo "${username} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers; } &&
 
     # Download the flatiron bash_profile
-    su -l ${username} -c 'if [ -f ~/.bash_profile ]; then mv ~/.bash_profile{,.bak}; fi' &&
+su -l ${username} -c 'if [ -f ~/.bash_profile ]; then mv ~/.bash_profile{,.bak}; fi' &&
     su -l ${username} -c 'wget https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/linux_bash_profile -O ~/.bash_profile' &&
 
     # Tell the XFCE4 terminal emulated to use a login shell
