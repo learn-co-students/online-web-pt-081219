@@ -102,7 +102,8 @@ downloaded, instead of /Empty/. Go ahead and click /OK/.
 
 [[file:19-Timezone.png]]
 
-8. Enter information to create a new user account and click /Continue/:
+8. Enter information to create a new user account (make sure you
+   remember the password you create) and click /Continue/:
 
 [[file:20-CreateUser.png]]
 
@@ -148,3 +149,44 @@ The VM will now reboot:
 When the script finishes, it should say "AUTO SETUP COMPLETE!!!":
 
 [[file:29-SetupScriptFinished.png]]
+
+* Setting up the learn-co gem
+
+1. In a terminal, run =learn whoami=:
+
+[[file:30-LearnWhoAmI.png]]
+
+2. Open up a web browser and navigate to
+   https://learn.co/your-github-username. My github name is
+   j-shilling, so I'm going to go to https://learn.co/j-shilling:
+
+[[file:31-NavigateToLearnCo.png]]
+
+3. Scroll to the bottom of the page and copy the OAuth Token:
+
+[[file:32-GetToken.png]]
+
+4. Past that OAuth Token into the terminal:
+
+[[file:33-PastToken.png]]
+
+When you press /Enter/ you should see your account information:
+
+[[file:34-TokenEntered.png]]
+
+* Final Steps
+
+You just about done! All that's left to do is pick out a browser and
+text editor:
+
+- Firefox is the default web browser on XUbuntu, but you can install
+  Chrome if you want. Just navigate to the [[https://www.google.com/chrome/][Google Chrome]] webpage,
+  click /Download Chrome/ and select the /64 bit .deb/ version.
+- There are several--probably--thousands of great text editors for
+  programming, but some popular ones are:
+  - [[https://atom.io/][Atom]]
+  - [[https://code.visualstudio.com/][Visual Studio Code]]
+  - [[https://www.sublimetext.com/][Sublime Text]]
+
+When installing new software from the internet, remember to always
+choice /.deb/ packages, or ones that are marked for /Ubuntu/ Linux.
