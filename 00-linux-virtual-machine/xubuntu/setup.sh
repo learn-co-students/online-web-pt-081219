@@ -27,7 +27,7 @@ su -l ${username} -c 'if [ -f ~/.bash_profile ]; then mv ~/.bash_profile{,.bak};
     # Install ruby
     su -l ${username} -c 'hash ruby 2>/dev/null || rvm install ruby' &&
     # By default don't parse rdoc
-    su -l ${username} -c 'echo "gem: --no-ri --no-rdoc" > $HOME/.gemrc' &&
+    su -l ${username} -c 'echo "gem: --no-document" >> $HOME/.gemrc' &&
     # Install the needed gems
     su -l ${username} -c 'gem update --system' &&
     su -l ${username} -c 'gem install learn-co' &&
