@@ -130,8 +130,7 @@ The VM will now reboot:
 
 [[file:25-OpenTerminalEmulator.png]]
 
-4. In the terminal run =wget
-   https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/setup.sh=
+4. In the terminal run =wget https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/setup.sh=
 
 [[file:26-WGetSetupScript.png]]
 
@@ -156,8 +155,7 @@ When the script finishes, it should say "AUTO SETUP COMPLETE!!!":
 
 [[file:30-LearnWhoAmI.png]]
 
-2. Open up a web browser and navigate to
-   https://learn.co/your-github-username. My github name is
+2. Open up a web browser and navigate to https://learn.co/your-github-username. My github name is
    j-shilling, so I'm going to go to https://learn.co/j-shilling:
 
 [[file:31-NavigateToLearnCo.png]]
