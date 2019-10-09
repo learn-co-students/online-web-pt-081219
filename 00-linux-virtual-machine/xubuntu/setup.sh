@@ -14,6 +14,7 @@ apt-get -yq update &&
     apt-add-repository -y ppa:rael-gc/rvm &&
     apt-get -yq install rvm &&
 
+    su -l ${username} -c 'if [ -f ~/.bash_profile ]; then mv ~/.bash_profile{,.bak}; fi' &&
     su -l ${username} -c 'wget https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/linux_bash_profile -O ~/.bash_profile' &&
 
 # Ensure login shell
@@ -33,5 +34,21 @@ apt-get -yq update &&
 
     su -l ${username} -c 'touch ~/.netrc && chmod 0600 ~/.netrc' &&
 
-    su -l ${username} -c 'hash nvm 2>/dev/null || wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash' &&
-    su -l ${username} -c 'source ~/.bashrc && nvm'
+    su -l ${username} -c 'type nvm >/dev/null 2>&1 || wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash' &&
+    su -l ${username} -c 'hash node 2>/dev/null || nvm install node' &&
+    su -l ${username} -c 'hash create-react-app 2>/dev/null || npm install -g create-react-app' &&
+    su -l ${username} -c 'hash phantomjs 2>/dev/null || npm install -g phantomjs' &&
+
+    su -l ${username} -c 'wget https://raw.githubusercontent.com/flatiron-school/dotfiles/master/irbrc -O ~/.irbrc' &&
+    su -l ${username} -c 'wget https://raw.githubusercontent.com/flatiron-school/dotfiles/master/ubuntu-gitignore -O ~/.gitignore' &&
+    su -l ${username} -c 'wget https://raw.githubusercontent.com/flatiron-school/dotfiles/master/linux_gitconfig -O ~/.gitconfig' &&
+
+    echo "
+
+AUTO SETUP COMPLETE!!!
+
+Please run \"learn whoami\" to finish setting up the learn gem.
+
+" &&
+
+    su -l ${username}
