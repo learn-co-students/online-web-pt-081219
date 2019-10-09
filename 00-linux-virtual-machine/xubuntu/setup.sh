@@ -13,7 +13,7 @@ apt-get -yq update &&
     # RVM has a build for ubuntu. Add the PPA and install it.
     apt-get -yq install software-properties-common &&
     apt-add-repository -y ppa:rael-gc/rvm &&
-    apt-get -yq install rvm
+    apt-get -yq install rvm &&
 
     { grep -qxF "${username} ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo "${username} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers; } &&
 
