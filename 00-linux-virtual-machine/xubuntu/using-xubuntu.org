@@ -128,3 +128,23 @@ The VM will now reboot:
 3. Open the Terminal Emulator:
 
 [[file:25-OpenTerminalEmulator.png]]
+
+4. In the terminal run =wget
+   https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/setup.sh=
+
+[[file:26-WGetSetupScript.png]]
+
+5. Run =chmod +x setup.sh=
+
+[[file:27-ChmodSetupScript.png]]
+
+6. Run =./setup.sh=. It will ask you for the password you made when you
+   created your user account. As you type the password, nothing will
+   appear on the screen. Don't worry--it is working, just type your
+   password and hit /enter/.
+
+[[file:28-RunSetupScript.png]]
+
+When the script finishes, it should say "AUTO SETUP COMPLETE!!!":
+
+[[file:29-SetupScriptFinished.png]]
