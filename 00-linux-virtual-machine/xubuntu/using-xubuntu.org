@@ -235,3 +235,7 @@ text editor:
 
 When installing new software from the internet, remember to always
 choice /.deb/ packages, or ones that are marked for /Ubuntu/ Linux.
+
+Once you have your text editor set up you are ready to learn:
+1. [[https://help.learn.co/en/articles/492935-how-to-manually-open-a-lab][How to manually open a lab]]
+2. [[https://help.learn.co/en/articles/493057-how-to-manually-submit-a-lab][How to manually submit a lab]]
