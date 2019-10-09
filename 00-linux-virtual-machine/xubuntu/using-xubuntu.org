@@ -49,7 +49,7 @@ You should now see your new VM listed on the left:
 
 1. Click on /Settings/ and navigate to the /Storage/ section:
 
-[[file:09-Settings.png]]
+[[file:08-Settings.png]]
 
 2. Under /Controller: IDE/ select the CD icon that says /Empty/ next to
    it. On the right, next to /Optical Drive: IDE Secondary Master/ click
@@ -107,17 +107,15 @@ downloaded, instead of /Empty/. Go ahead and click /OK/.
 
 [[file:20-CreateUser.png]]
 
-XUbuntu should now be installing. It might take a little bit:
+9. XUbuntu should now be installing. It might take a little bit:
 
 [[file:21-XUbuntuIsInstalling.png]]
 
-* Finalizing your installation
-
-1. When the installation finishes, click /Restart Now/:
+10. When the installation finishes, click /Restart Now/:
 
 [[file:22-InstallationComplete.png]]
 
-2. When it asks you to remove the installation medium, just press
+11. When it asks you to remove the installation medium, just press
    /ENTER/:
 
 [[file:23-RemoveCD.png]]
@@ -125,6 +123,55 @@ XUbuntu should now be installing. It might take a little bit:
 The VM will now reboot:
 
 [[file:24-XUbuntuBooted.png]]
+
+* (Optional) Installing Virtual Box Guest Additions
+
+1. When the VM boots up again. Select /Devices/ from the VirtualBox menu
+   bar and then /Insert Guest Additions CD image.../:
+
+[[file:InsertVBoxAdditions.png]]
+
+2. A virtual CD should be inserted and a /File Manager/ window should
+   open:
+
+[[file:FileMangerOpens.png]]
+
+3. Right click in the /File Manager/ window and select /Open Terminal
+   Here/:
+
+[[file:RightClick.png]]
+
+4. In the terminal run =sudo apt install gcc make perl=
+
+The terminal may ask you for a password. If it does, type the password
+you for the user account you created earlier. You won't see anything
+appear on the scree--but it is working. Just type the password and hit
+/Enter/.
+
+It will pause to ask you to confirm that you want to install
+everything. Just hit /Enter/:
+
+[[file:Confirm.png]]
+
+5. In the terminal, run =sudo ./VBoxLinuxAdditions.rub=:
+
+[[file:RunVBoxAdditions.png]]
+
+6. The script should run and finish without any errors:
+
+[[file:VBoxAdditionsFinished.png]]
+
+7. Select /Devices/ in the VirtualBox menu bar, then /Shared Clipboard/,
+   then /Bidirectional/.
+
+[[file:Clipboard.png]]
+
+8. Click the icon in the upper left and hit the log out putting to
+   restart the VM:
+
+[[file:Restart.png]]
+
+* Finalizing your installation
 
 3. Open the Terminal Emulator:
 
