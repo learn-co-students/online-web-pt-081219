@@ -14,7 +14,7 @@ apt-get -yq update &&
     apt-add-repository -y ppa:rael-gc/rvm &&
     apt-get -yq install rvm &&
 
-    su -l ${username} -c 'wget https://raw.githubusercontent.com/flatiron-school/dotfiles/master/linux_bash_profile -O ~/.bash_profile' &&
+    su -l ${username} -c 'wget https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/linux_bash_profile -O ~/.bash_profile' &&
 
 # Ensure login shell
     su -l ${username} -c 'grep -qxF "CommandLoginShell=TRUE" ~/.config/xfce4/terminal/terminalrc || echo "CommandLoginShell=TRUE" >> ~/.config/xfce4/terminal/terminalrc' &&
