@@ -1,0 +1,54 @@
+* What is SQL?
+- SQL is a /language/ used to get data from various /programs/
+* What is SQLite3?
+- SQLite3 is a /program/ that understands /SQL/ and saves data to a /file/
+* How to CRUD?
+- TABLES
+  #+BEGIN_SRC sql
+    CREATE TABLE cats (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    age INTEGER
+    );
+  #+END_SRC
+
+  #+BEGIN_SRC sql
+    ALTER TABLE cats ADD COLUMN breed TEXT;
+  #+END_SRC
+
+  #+BEGIN_SRC sql
+    DROP TABLE cats;
+  #+END_SRC
+
+- CREATE
+
+  #+BEGIN_SRC sql
+    INSERT INTO cats (name, age, breed) VALUES ('Maru', 3, 'Scottish Fold');
+  #+END_SRC
+
+- READ
+
+  #+BEGIN_SRC sql
+    SELECT id, name, age bread FROM cats;
+  #+END_SRC
+
+  #+BEGIN_SRC sql
+    SELECT * FROM cats WHERE age < 2;
+  #+END_SRC
+
+- UPDATE
+
+  #+BEGIN_SRC sql
+    UPDATE cats SET name = "Hana" WHERE name = "Hannah";
+  #+END_SRC
+
+- DELETE
+
+  #+BEGIN_SRC sql
+    DELETE FROM cats WHERE id = 2;
+  #+END_SRC
+
+* Break out groups
+1. Open sandbox / local environment
+2. Clone [[git@github.com:j-shilling/intro-sql.git]]
+3. Discuss and complete the README.md
