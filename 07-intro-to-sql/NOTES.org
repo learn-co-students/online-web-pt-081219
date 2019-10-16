@@ -29,7 +29,7 @@
 - READ
 
   #+BEGIN_SRC sql
-    SELECT id, name, age bread FROM cats;
+    SELECT id, name, age, bread FROM cats;
   #+END_SRC
 
   #+BEGIN_SRC sql
