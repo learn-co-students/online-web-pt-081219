@@ -15,7 +15,7 @@ apt-get -yq update &&
     apt-add-repository -y ppa:rael-gc/rvm &&
     apt-get -yq install rvm &&
 
-    # When RVM installs ruby, it's going to run a script that involves running sudo. This script 
+    # When RVM installs ruby, it's going to run a script that involves running sudo. This script
     # will only work if run from an interactive shell and not from within this bash script--this
     # work around makes sudo not ask for a password, so that we can run the RVM from within this
     # script.
@@ -26,6 +26,7 @@ su -l ${username} -c 'if [ -f ~/.bash_profile ]; then mv ~/.bash_profile{,.bak};
     su -l ${username} -c 'wget https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/linux_bash_profile -O ~/.bash_profile' &&
 
     # Tell the XFCE4 terminal emulated to use a login shell
+    su -l ${username} -c 'grep -qxF "[Configuration]" ~/.config/xfce4/terminal/terminalrc || echo "[Configuration]" >> ~/.config/xfce4/terminal/terminalrc' &&
     su -l ${username} -c 'grep -qxF "CommandLoginShell=TRUE" ~/.config/xfce4/terminal/terminalrc || echo "CommandLoginShell=TRUE" >> ~/.config/xfce4/terminal/terminalrc' &&
 
     # Install ruby
