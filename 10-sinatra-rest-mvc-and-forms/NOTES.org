@@ -1,0 +1,42 @@
+* Sinatra REST, MVC, and Forms
+** CRUD
+- CREATE
+- READ
+- UPDATE
+- DELETE
+** REST
+Way of thinking about how users will interact with your website from
+the outside
+
+- Not thinking about classes (or Ruby)
+- What is client doing to do
+
+Standard way for clients to communicate to a server what they want to
+have happen
+
+- HTTP
+  - VERB (what to do)
+  - Route (where to do it)
+
+| CRUD   | VERB      | ROUTE          | ACTION                             |
+|--------+-----------+----------------+------------------------------------|
+| CREATE | POST      | /comments      | create new comment                 |
+| READ   | GET       | /comments      | read all comments                  |
+| READ   | GET       | / comments/:id | read the comment with id = :id     |
+| UPDATE | PATCH/PUT | / comments/:id | change an already existing comment |
+| DELETE | DELETE    | / comments/:id | delete the comment with id = :id   |
+
+GET /videos /1012 => id = 1012
+PATH /users / 3029 => update user 3029
+
+** MVC (Ruby)
+- Models (ActiveRecord) => Representing specific parts of our Domain
+- Views (HTML) => What the user actually sees
+- Contoller => What brings it all together (listen for specific REST
+  actions and call ActiveRecord methods)
+
+
+#+BEGIN_SRC
+GET  /comments/new
+POST /comments
+#+END_SRC

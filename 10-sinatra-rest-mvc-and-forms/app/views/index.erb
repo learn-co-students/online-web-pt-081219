@@ -1,0 +1,7 @@
+<h1>All Comments</h1>
+<ul>
+    <% @comments.each do |comment| %>
+	<li><a href="/comments/<%= comment.id %>"><%= comment.title %></a></li>
+    <% end %>
+</ul>
+<a href="/comments/new">Create new comment</a>
