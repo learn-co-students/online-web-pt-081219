@@ -10,24 +10,27 @@ username=${1:-$(whoami)}
 apt-get -yq update &&
     apt-get -yq upgrade &&
 
-    # RVM has a build for ubuntu. Add the PPA and install it.
-    apt-get -yq install software-properties-common &&
-    apt-add-repository -y ppa:rael-gc/rvm &&
-    apt-get -yq install rvm &&
+    # Make sure that required tools are installed
+    apt-get -yq install gnupg2 &&
+    apt-get -yq install curl && # required by RVM install script
 
     # When RVM installs ruby, it's going to run a script that involves running sudo. This script
     # will only work if run from an interactive shell and not from within this bash script--this
     # work around makes sudo not ask for a password, so that we can run the RVM from within this
     # script.
-    { grep -qxF "${username} ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo "${username} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers; } &&
+    # { grep -qxF "${username} ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo "${username} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers; } &&
 
     # Download the flatiron bash_profile
-su -l ${username} -c 'if [ -f ~/.bash_profile ]; then mv ~/.bash_profile{,.bak}; fi' &&
+    su -l ${username} -c 'if [ -f ~/.bash_profile ]; then mv ~/.bash_profile{,.bak}; fi' &&
     su -l ${username} -c 'wget https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/linux_bash_profile -O ~/.bash_profile' &&
 
     # Tell the XFCE4 terminal emulated to use a login shell
     su -l ${username} -c 'grep -qxF "[Configuration]" ~/.config/xfce4/terminal/terminalrc || echo "[Configuration]" >> ~/.config/xfce4/terminal/terminalrc' &&
     su -l ${username} -c 'grep -qxF "CommandLoginShell=TRUE" ~/.config/xfce4/terminal/terminalrc || echo "CommandLoginShell=TRUE" >> ~/.config/xfce4/terminal/terminalrc' &&
+
+    # Install RVM
+    su -l ${username} -c 'gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB' &&
+    su -l ${username} -c 'hash rvm 2>/dev/null || wget -q -O - https://get.rvm.io | bash' &&
 
     # Install ruby
     su -l ${username} -c 'hash ruby 2>/dev/null || rvm install ruby' &&
