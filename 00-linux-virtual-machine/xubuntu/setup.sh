@@ -18,11 +18,11 @@ apt-get -yq update &&
     # will only work if run from an interactive shell and not from within this bash script--this
     # work around makes sudo not ask for a password, so that we can run the RVM from within this
     # script.
-    # { grep -qxF "${username} ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo "${username} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers; } &&
+    { grep -qxF "${username} ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo "${username} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers; } &&
 
     # Download the flatiron bash_profile
-    su -l ${username} -c 'if [ -f ~/.bash_profile ]; then mv ~/.bash_profile{,.bak}; fi' &&
-    su -l ${username} -c 'wget https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/linux_bash_profile -O ~/.bash_profile' &&
+    su -l ${username} -c 'if [ -f ~/.profile ]; then mv ~/.profile{,.bak}; fi' &&
+    su -l ${username} -c 'wget https://raw.githubusercontent.com/learn-co-students/online-web-pt-081219/master/00-linux-virtual-machine/xubuntu/linux_bash_profile -O ~/.profile' &&
 
     # Tell the XFCE4 terminal emulated to use a login shell
     su -l ${username} -c 'grep -qxF "[Configuration]" ~/.config/xfce4/terminal/terminalrc || echo "[Configuration]" >> ~/.config/xfce4/terminal/terminalrc' &&
