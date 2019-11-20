@@ -1,0 +1,14 @@
+* CRUD
+ - REST (get, post, patch, delete)
+- views: index.erb (shows all), show.erb (shows one), new.erb (create
+  form), edit.erb (update form)
+
+| Verb   | URI            | Action               |
+|--------+----------------+----------------------|
+| GET    | /posts/new     | render new form      |
+| POST   | /posts         | create a new post    |
+| GET    | /posts         | show index           |
+| GET    | /posts/id      | show one post        |
+| GET    | /posts/id/edit | render the edit form |
+| PATCH  | /posts/id      | update a post        |
+| DELETE | /posts/id      | delete a post        |
