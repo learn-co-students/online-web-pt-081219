@@ -1,0 +1,5 @@
+<h1><%= @verb.infinitive %></h1>
+<%= link_to "edit", edit_verb_path(@verb) %>
+<%= form_for(@verb, :html => { :method => :delete, :remote => true }) do |f| %>
+    <%= f.submit value: 'Delete' %>
+    <% end %>

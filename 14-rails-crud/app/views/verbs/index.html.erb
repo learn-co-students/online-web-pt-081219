@@ -1,0 +1,9 @@
+<h1>Verbs:</h1>
+
+<ul>
+    <% @verbs.each do |verb| %>
+	<li><%= link_to(verb.infinitive, verb_path(verb)) %></li>
+    <% end %>
+</ul>
+
+<%= link_to "Create New", new_verb_path %>

@@ -1,0 +1,9 @@
+<h1>New Verb</h1>
+
+<%= form_for(@verb) do |f| %>
+    <p>
+	<%= f.label :infinitive %>
+	<%= f.text_field :infinitive %>
+    </p>
+    <%= f.submit %>
+<% end %>
