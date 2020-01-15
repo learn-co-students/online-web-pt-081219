@@ -1,6 +1,7 @@
 class VerbsController < ApplicationController
   before_action :set_verb, only: [:show, :edit, :update, :destroy]
   def index
+    byebug
     @verbs = Verb.all
   end
 
