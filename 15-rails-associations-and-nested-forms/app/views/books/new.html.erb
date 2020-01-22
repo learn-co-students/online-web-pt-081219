@@ -3,7 +3,7 @@
 <%= form_for @book do |f| %>
     <p>
 	<%= f.label :title %>
-	<%= f.text_field :title %>
+	<%= f.text_field :title, :id => 'foo', :foo => 'bar' %>
 
     </p>
     <p>

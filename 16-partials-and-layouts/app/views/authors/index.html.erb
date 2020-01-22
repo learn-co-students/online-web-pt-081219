@@ -1,0 +1,6 @@
+<h1>Authors</h1>
+
+<% @authors.each do |author| %>
+    <h2><%= author.name %></h2>
+    <%= render partial: 'books/all_books', locals: {books: author.books} %>
+<% end %>

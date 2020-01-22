@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PartialsAndLayouts</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+
+  <body>
+      <nav>
+	  <%= link_to :authors, authors_path %>
+	  <%= link_to :genres, genres_path %>
+	  <%= link_to :books, books_path %>
+      </nav>
+      <% if @errors %>
+	  <ul>
+	      <% @errors.each do |msg| %>
+		  <li><%= msg %></li>
+		  <% end %>
+	  </ul>
+	  <% end %>
+    <%= yield %>
+  </body>
+</html>
