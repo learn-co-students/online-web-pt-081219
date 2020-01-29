@@ -1,0 +1,4 @@
+<h1><%= @book.title %></h1>
+<p>By <%= link_to @book.author.name, author_books_path(@book.author, @book) %></p>
+<%= link_to :'Edit Book', edit_author_book_path(@book.author, @book) %>
+<%= link_to :'Delete Book', author_book_delete_path(@book.author, @book), method: :delete %>

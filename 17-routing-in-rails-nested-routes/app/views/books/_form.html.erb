@@ -1,0 +1,13 @@
+<%= form_for(book, url: url) do |f| %>
+    <p>
+	<%= f.label :title, :'Title: ' %>
+	<%= f.text_field :title %>
+    </p>
+    <p>
+	<%= fields_for :author, author do |ff| %>
+	    <%= ff.label :name, :'Author Name' %>
+	    <%= ff.text_field :name %>
+	<% end %>
+    </p>
+    <%= f.submit %>
+<% end %>
