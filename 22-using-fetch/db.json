@@ -1,0 +1,30 @@
+{
+  "cohorts": [
+    {
+      "id": 1,
+      "name": "rome-it-031544"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Marcus Junius Brutus"
+    },
+    {
+      "name": "Cassius Longinus",
+      "id": 2
+    },
+    {
+      "name": "Decimus Junius Brutus",
+      "id": 3
+    },
+    {
+      "name": "Decimus Junius Brutus",
+      "id": 4
+    },
+    {
+      "name": "Marus Tullius Cicero",
+      "id": 5
+    }
+  ]
+}
