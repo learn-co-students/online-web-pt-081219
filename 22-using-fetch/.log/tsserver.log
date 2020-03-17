@@ -1,0 +1,18 @@
+Info 0    [11:39:17.289] Starting TS Server
+Info 1    [11:39:17.289] Version: 3.6.3
+Info 2    [11:39:17.289] Arguments: /home/jake/.nvm/versions/node/v12.6.0/bin/node /home/jake/.nvm/versions/node/v12.6.0/bin/tsserver --logFile /home/jake/projects/lecture-code/22-using-fetch/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/bc8262049ef2bec4caccaaf019f050a7/tscancellation*
+Info 3    [11:39:17.289] Platform: linux NodeVersion: 12 CaseSensitive: true
+Info 4    [11:39:17.362] Search path: /home/jake/projects/lecture-code/22-using-fetch
+Info 5    [11:39:17.363] For info: /home/jake/projects/lecture-code/22-using-fetch/index.js :: No config files found.
+Info 6    [11:39:17.365] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 7    [11:39:17.878] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 1 structureChanged: true Elapsed: 513ms
+Info 8    [11:39:17.878] Project '/dev/null/inferredProject1*' (Inferred) 
+Info 9    [11:39:17.878] 	Files (6)
+
+Info 10   [11:39:17.878] -----------------------------------------------
+Info 11   [11:39:20.143] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 12   [11:39:20.145] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 2 structureChanged: false Elapsed: 2ms
+Info 13   [11:39:20.145] Different program with same set of files:: oldProgram.structureIsReused:: 2
+Info 14   [11:39:20.145] Structure before ensureProjectForOpenFiles:
+Info 15   [11:39:20.145] Structure after ensureProjectForOpenFiles:
+Info 16   [11:39:20.145] got projects updated in background, updating diagnostics for /home/jake/projects/lecture-code/22-using-fetch/index.js
